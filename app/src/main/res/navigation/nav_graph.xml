@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/BookList">
+
+    <fragment
+        android:id="@+id/BookList"
+        android:name="com.polinasmogi.viewpager.ui.list.BookListFragment"
+        android:label="Book list"
+        tools:layout="@layout/fragment_book_list">
+        <action
+            android:id="@+id/action_BookList_to_OrderBook"
+            app:destination="@id/OrderBook" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OrderBook"
+        android:name="com.polinasmogi.viewpager.ui.order.OrderBookHostFragment"
+        android:label="Order a book"
+        tools:layout="@layout/fragment_host">
+    </fragment>
+</navigation>
